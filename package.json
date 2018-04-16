@@ -1,0 +1,56 @@
+{
+  "name": "apsketchpluginboilerplate",
+  "version": "0.1.0",
+  "engines": {
+    "sketch": ">=3.0"
+  },
+  "skpm": {
+    "name": "ApSketchPluginBoilerplate",
+    "manifest": "src/manifest.json",
+    "main": "plugin.sketchplugin",
+    "assets": [
+      "assets/**/*"
+    ]
+  },
+  "resources": [
+    "webViewUI/index.js"
+  ],
+  "scripts": {
+    "build": "skpm-build",
+    "watch": "skpm-build --watch",
+    "start": "skpm-build --watch --run",
+    "postinstall": "npm run build && skpm-link"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.4.0",
+    "babel-plugin-react-sketchapp-svg": "^1.0.0-beta4",
+    "css-loader": "^0.28.10",
+    "file-loader": "^1.1.9",
+    "html-loader": "^0.5.5",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.2",
+    "url-loader": "^0.6.2"
+  },
+  "author": "Thierry Charbonnel\n <thierryc@users.noreply.github.com\n>",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-primitives": "^0.5.0",
+    "react-primitives-svg": "0.0.3",
+    "sketch-module-fetch-polyfill": "^0.1.4",
+    "sketch-module-web-view": "^0.2.6",
+    "uuid": "^3.2.1"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "babel-plugin-react-sketchapp-svg",
+        {
+          "defaultHeight": 16,
+          "defaultWidth": 16
+        }
+      ]
+    ]
+  }
+}

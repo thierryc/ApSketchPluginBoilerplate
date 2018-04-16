@@ -1,0 +1,18 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Command",
+      "identifier": "my-command-identifier",
+      "script": "./command1.js"
+    }
+  ],
+  "menu": {
+    "title": "ApSketchPluginBoilerplate",
+    "items": [
+      "my-command-identifier"
+    ]
+  }
+}
