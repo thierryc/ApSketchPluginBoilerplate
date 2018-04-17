@@ -34,6 +34,7 @@
   },
   "author": "Thierry Charbonnel\n <thierryc@users.noreply.github.com\n>",
   "dependencies": {
+    "@skpm/extract-loader": "^2.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-primitives": "^0.5.0",

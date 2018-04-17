@@ -11,4 +11,7 @@ window.updateData = json => {
 ReactDOM.render(
   <App/>,
   document.getElementById('root')
+
 );
+
+//window.location = "https://www.apple.com"
