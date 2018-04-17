@@ -2,7 +2,7 @@
 import WebUI from 'sketch-module-web-view';
 import {isWebviewPresent, sendToWebview} from 'sketch-module-web-view/remote';
 
-const IDENTIFIER = 'io.anoterplanet.ap1.webview';
+const IDENTIFIER = 'com.freeandwilling.ap1.webview';
 
 export function createWebview(context, handlers, title) {
   const options = {
@@ -15,7 +15,9 @@ export function createWebview(context, handlers, title) {
     // background: NSColor.blackColor(), //  default is white
     // [NSColor colorWithCalibratedRed:(r/255.0f) green:(g/255.0f) blue:(b/255.0f) alpha:1.0]
     // background: getNSColor(0.156862745098039, 0.176470588235294, 0.27843137254902, 1.0), // 40, 45, 71
+    41, 184, 127
     */
+    background: NSColor.colorWithDeviceRed_green_blue_alpha((41 / 255.0), (184 / 255.0), ( 127 / 255.0), 1.0),
     blurredBackground: false,
     onlyShowCloseButton: false,
     title,
