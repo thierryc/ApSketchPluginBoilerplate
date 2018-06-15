@@ -2,13 +2,13 @@ import BrowserWindow from 'sketch-module-web-view'
 
 const IDENTIFIER = 'io.anotherplanet.ApReactSketchPluginBoilerplate.webview';
 
-export function createWebview(context, handlers, title) {
+export function createWebview(title = '', backgroundColor = '#ffffff', width = 400, height = 300) {
   const options = {
     identifier: IDENTIFIER,
     title,
-    width: 400,
-    height: 700,
-    backgroundColor: '#ffffff',
+    width,
+    height,
+    backgroundColor,
     titleBarStyle: 'default',
     alwaysOnTop: 'floating',
     /*
@@ -22,6 +22,7 @@ export function createWebview(context, handlers, title) {
     handlers,
     */
   }
+
   const browserWindow = new BrowserWindow(options)
   browserWindow.loadURL(require('../webViewUI/index.html'))
   browserWindow._panel.setTitlebarAppearsTransparent(true)
@@ -29,14 +30,3 @@ export function createWebview(context, handlers, title) {
   browserWindow._panel.standardWindowButton(NSWindowZoomButton).setHidden(true)
   return browserWindow;
 }
-
-
-
-/*
-function makeTitlebarTransparent() {
-  const threadDictionary = NSThread.mainThread().threadDictionary();
-  if (!threadDictionary[IDENTIFIER]) { return; }
-  const panel = threadDictionary[IDENTIFIER];
-  panel.setTitlebarAppearsTransparent(true);
-}
-*/

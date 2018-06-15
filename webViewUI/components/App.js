@@ -18,8 +18,8 @@ export default class App extends React.Component {
     //document.removeEventListener('keydown', this.onKeyDown.bind(this));
   }
 
-  triggerAction(handlerName) {
-    pluginCall(handlerName);
+  triggerAction(handlerName, attrs) {
+    pluginCall(handlerName, attrs);
   }
 
   render() {
@@ -28,10 +28,11 @@ export default class App extends React.Component {
         style= {{
           overflow: 'scroll',
           height: 640,
+          padding: 16,
+          textAlign: 'center',
         }}>
-
         <p>Ap React Sketch Plugin Boilerplate</p>
-
+        <button onClick={() => this.triggerAction('showMessage', 'My Message...')}>Go</button>
       </div>
     );
   }
