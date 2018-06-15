@@ -10,7 +10,7 @@
     }
   ],
   "menu": {
-    "title": "ApSketchPluginBoilerplate",
+    "title": "ApReactSketchPluginBoilerplate",
     "items": [
       "my-command-identifier"
     ]
