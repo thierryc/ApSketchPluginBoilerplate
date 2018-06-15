@@ -29,7 +29,7 @@
     "html-loader": "^0.5.5",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
-    "sketch-module-web-view": "^1.1.7",
+    "sketch-module-web-view": "^0.2.6",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1"
   },
